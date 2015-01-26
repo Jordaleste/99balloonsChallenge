@@ -37,12 +37,19 @@ class ViewController: UIViewController {
     
         
         let balloon = balloonInstance[currentIndex]
+        
+        if balloon.count == 1 {
+            countLabel.text = "1 balloon"
+            myImageView.image = balloon.image
+            currentIndex += 1
+        }
+        else {
         countLabel.text = "\(balloon.count) balloons"
         myImageView.image = balloon.image
         
         currentIndex += 1
-        
-        
+        }
+    
     }
     
     func balloonCreat () {
